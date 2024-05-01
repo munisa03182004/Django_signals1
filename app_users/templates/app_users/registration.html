@@ -8,10 +8,14 @@
 		<title>Student management</title>
 	</head>
 	<body>
-		<form action="" method="post">
+		
+	
+		<form action="" class="w-[1000px] flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" method="post">
+			
 			{% csrf_token %} {{ form }}
-			<button type="submit">Ro'yxatdan o'tish</button>
+			<button type="submit" class="mt-5 border rounded border-green-600 py-1 px-3 text-center w-full/2 text-green-600 hover:bg-green-600 hover:text-white transition duration-200">Ro'yxatdan o'tish</button>
 		</form>
 		<script src="{% static 'script.js' %}"></script>
+		
 	</body>
 </html>

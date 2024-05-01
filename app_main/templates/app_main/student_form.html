@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="" method="post">
-    {% csrf_token %}
+    <div class="w-[1000px] flex flex-col items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <form action="" method="post">
+        {% csrf_token %}
     
-    {% for field in form %}
-        <div class="w-[400px]">
-            <div>
-                <label for="">{{ field.label }}</label>
+        {% for field in form %}
+            <div class="w-[400px]">
+                <div>
+                    <label for="">{{ field.label }}</label>
+                </div>
+                {{ field }}
             </div>
-            {{ field }}
-        </div>
-    {% endfor %}
+        {% endfor %}
 
-    <button type="submit" class="mt-5 border rounded border-{{ btn_color }} py-2 px-4 text-center w-full text-{{ btn_color }} hover:bg-{{ btn_color }} hover:text-white transition duration-200">{{ btn_text }}</button>
-</form>
+        <button type="submit" class="mt-5 border rounded border-{{ btn_color }} py-2 px-4 text-center w-full text-{{ btn_color }} hover:bg-{{ btn_color }} hover:text-white transition duration-200">{{ btn_text }}</button>
+        </form>
+    </div>
 {% endblock content %}

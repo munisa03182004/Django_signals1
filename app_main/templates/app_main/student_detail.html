@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3 class="text-3xl">{{ teacher }} ning o'quvchisi:  {{ student }}</h3>
+    <h3 class=" text-3xl"> Ma'lumotlari:</h3>
+    <h3 class="text-left w-full my-3 text-3xl"> Hobby lari:</h3>
+    
+    {% for h in hobby %}
+        <h3 class="text-left w-full my-2 text-xl">{{ h.name }}</h3>
+    {% endfor %}
+
+    {% if student.book %}
+    <h3 class="text-left w-full my-5 text-3xl">Kitobi:{{ student.book.title }}</h3>
+    {% else %}
+        -
+    {% endif %}
+
+
+
+{% endblock  %}

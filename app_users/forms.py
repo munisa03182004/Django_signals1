@@ -15,6 +15,28 @@ class UserRegistrationForm(ModelForm):
         model = User
         fields = ['first_name', 'last_name', 'username',
                   'email', 'password1', 'password2']
+        widgets = {
+            'first_name': forms.TextInput(attrs={
+                'class': 'w-full border rounded border-gray-900 py-2 px-4 outline-0'
+            }),
+            'last_name': forms.TextInput(attrs={
+                'class': 'w-full border rounded border-gray-900 py-2 px-4 outline-0'
+            }),
+
+            'username': forms.TextInput(attrs={
+                'class': 'w-full border rounded border-gray-900 py-2 px-4 outline-0'
+            }),
+            'email': forms.TextInput(attrs={
+                'class': 'w-full border rounded border-gray-900 py-2 px-4 outline-0'
+            }),
+
+            'password1': forms.TextInput(attrs={
+                'class': 'w-full border rounded border-gray-900 py-2 px-4 outline-0'
+            }),
+            'password2': forms.TextInput(attrs={
+                'class': 'w-full border rounded border-gray-900 py-2 px-4 outline-0'
+            }),
+        }
 
 
 class StudentForm(ModelForm):
